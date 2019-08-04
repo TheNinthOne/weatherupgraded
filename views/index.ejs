@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="conainer-fluid">
+      <h1>My Weather App</h1>
+      <form action="/" method="post">
+        <fieldset>
+          <input
+            name="city"
+            type="text"
+            class="ghost-input"
+            placeholder="Enter a City"
+            required
+          />
+        </fieldset>
+        <fieldset>
+          <label>Units: </label></br>
+          <input type="radio" name="units" value="metric" checked>Metric</input></br>
+          <input type="radio" name="units" value="imperial" >Imperial</input>
+        </fieldset>
+        </br>
+        <input type="submit" class="ghost-button" value="Get Weather" />
+      </form>
+      <% if(weather !== null){ %>
+      <p><%= weather %></p>
+      <% } %> <% if(error !== null){ %>
+      <p><%= error %></p>
+      <% } %>
+    </div>
+  </body>
+</html>
